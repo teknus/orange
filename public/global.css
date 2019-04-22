@@ -1,0 +1,9 @@
+body, html {
+    @import url('https://fonts.google.com/specimen/Open+Sans');
+    font-family: 'Open Sans', sans-serif;
+    background: #F9F9F9;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    height: 100%;
+    width: 100%;
+  }

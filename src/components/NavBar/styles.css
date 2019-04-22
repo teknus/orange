@@ -1,0 +1,25 @@
+/* Navbar container */
+.navbar {
+	overflow: hidden;
+	background-color: #ffffff;
+	font-family: 'Open Sans Light';
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+a {
+	float: right;
+  display: block;
+  text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+img {
+  float: left;
+  width: 138pt;
+  height: 18pt;
+  margin-left: 156pt;
+  margin-top: 25pt;
+}
