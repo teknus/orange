@@ -7,7 +7,7 @@ export default class Places extends Component {
 		return (
 			<>
 				<NavBar from="places"/>
-				<ImageGrid from="Place"/>
+				<ImageGrid from="Place" text="LIST OF PLACES"/>
 			</>
 		);
 	}

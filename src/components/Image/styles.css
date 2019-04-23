@@ -1,0 +1,18 @@
+.image img {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	box-shadow: 1px 1px 4px 0px #9b9b9b;
+}
+
+.image p {
+	position: absolute;
+	z-index: 80;
+    padding: 8px;
+	color: #ffffff;
+	font-family: "Open sans";
+	font-weight: 700;
+	font-size: 18pt;
+	top: inherit;
+	padding-top: 130pt;
+}

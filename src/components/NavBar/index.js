@@ -18,20 +18,20 @@ export default class NavBar extends Component {
 		return (
 			<div className="navbar">
 				<img className="logo" src={Logo} alt="Orange" />
-				<ul>
+				<ul className="links">
 					<ol>
-						<span className={this.selectedFood(this.props)}>
-							<Link to="/food">Food</Link>
+						<span className={this.selectedPlaces(this.props)}>
+							<Link to="/places">PLACES</Link>
 						</span>
 					</ol>
 					<ol>
 						<span className={this.selectedPeople(this.props)}>
-							<Link to="/people">People</Link>
+							<Link to="/people">PEOPLE</Link>
 						</span>
 					</ol>
 					<ol>
-						<span className={this.selectedPlaces(this.props)}>
-							<Link to="/places">Places</Link>
+						<span className={this.selectedFood(this.props)}>
+							<Link to="/food">FOODS</Link>
 						</span>
 					</ol>
 				</ul>

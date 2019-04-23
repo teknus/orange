@@ -1,0 +1,26 @@
+.page {
+	width: 580pt;
+	height: 1000px;
+	padding-top: 70pt;
+	padding-left: 155pt;
+}
+
+.page hr {
+	height: 4px;
+	display: block;
+	background: linear-gradient(to right, #ae23a9, #dc4e1b);
+}
+
+.page .description {
+	font-family: "Open sans Semibold";
+    color: #4a4a4a;
+    font-size: 12pt;
+	margin-bottom: -10pt;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(220px, 1fr));
+	grid-gap: 20px;
+	align-items: stretch;
+}

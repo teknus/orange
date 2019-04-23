@@ -1,6 +1,3 @@
-.container {
-}
-
 input {
 	background-color: white;
 	font-family: 'Open Sans Light';
@@ -105,11 +102,11 @@ form {
 	cursor: pointer;
 	font-size: 13px;
 }
-	.control input {
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
-	}
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
 .control_indicator {
 	position: absolute;
 	top: 8px;
@@ -157,4 +154,27 @@ hr {
 	border: none;
 	border-bottom: 1pt solid #9b9b9b;
 	width: 100%;
+}
+
+.LoginPage {
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+}
+
+.backgroundimg {
+	width: 100%;
+	height: 100%;
+	padding-left: 200pt;
+	object-fit: fill;
+	grid-column: 2 / 16;
+	grid-row: 2 / 8;
+}
+
+.container {
+	box-shadow: 3px 2px 12px #4a4a4a;
+	grid-column: 1 / 2;
+	grid-row: 1 / 4;
 }

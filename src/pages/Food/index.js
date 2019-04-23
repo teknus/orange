@@ -7,8 +7,8 @@ export default class Food extends Component {
 	render() {
 		return (
 			<>
-				<NavBar from="food"/>
-				<ImageGrid from="Food"/>
+				<NavBar from="food" />
+				<ImageGrid from="Food" text="LIST OF FOODS"/>
 			</>
 		);
 	}

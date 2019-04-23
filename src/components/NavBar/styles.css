@@ -1,12 +1,22 @@
 /* Navbar container */
 .navbar {
 	overflow: hidden;
+	position: absolute;
 	background-color: #ffffff;
 	font-family: 'Open Sans Light';
 	position: fixed;
 	top: 0;
-	width: 100vw;
+	left: 0;
+	padding-left: -40pt;
+	width: 1000pt;
 	height: 85px;
+	z-index: 90;
+	box-shadow: 0px 0px 8px 0px #9b9b9b;
+
+}
+
+.links {
+	padding-right: 250pt;
 }
 
 .unselected a {
@@ -16,18 +26,19 @@
 	padding: 10pt;
   display: block;
   text-align: center;
-	padding: 14px;
+	padding-left: 50px;
 	text-decoration: none;
 }
 
 .selected a {
-	font-family: "Open sans Semibold";
+	font-family: "Open sans";
+	font-weight: 700;
 	color: #4A4A4A;
 	float: right;
 	padding: 10pt;
   display: block;
   text-align: center;
-	padding: 14px;
+	padding-left: 50px;
 	text-decoration: none;
 
 }
