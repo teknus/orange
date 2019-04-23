@@ -81,7 +81,7 @@ class SignIn extends Component {
 						<pre className="bottom">Termos de uso - Política de privacidade </pre>
 					</div>
 				</form>
-				<img className="backgroundimg" src={background} />
+				<img className="backgroundimg" src={background} alt="BackGround Image"/>
 			</div>
 		);
 	}
