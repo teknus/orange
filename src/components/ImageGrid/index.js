@@ -4,38 +4,26 @@ import {getAllImages} from "../../services/api"
 export default class ImageGrid extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {list: [], loaded: false};
+		this.state = {list: []};
 	}
 
 	loadImages(from){
-		if(!this.state.loaded){
-			getAllImages(from)
-			.then(response => response.json())
-			.then(data => data.results)
-			.then( list => {
-				var parsed = [];
-				for (var counter in  list) {
-					parsed.push({"name": list[counter].name,"link": list[counter].link, "id": list[counter].objectId});
-				}
-				this.setState({list:parsed,loaded:true});
-			});
-			
-		}
-		var response = [];
-		for(var item in this.state.list){
-			response.push(
-				<div key={this.state.list[item].id}><img src={this.state.list[item].link} alt={this.state.list[item].name}/></div>
-			);
-		}
-		return response;
+		getAllImages(from)
+		.then(data =>this.setState({list:data.results,loaded:true}))	
 	}
 	
 
-
 	render() {
+		this.loadImages(this.props.from);
 		return (
             <>
-                {this.loadImages(this.props.from)}
+                {this.state.list.map(
+					(item, i) => {
+						return <div key={i}>
+							<img src={item.link} alt={item.name}/>
+						</div>
+					}
+				)}
 			</>
 		);
 	}

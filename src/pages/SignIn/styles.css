@@ -1,0 +1,160 @@
+.container {
+}
+
+input {
+	background-color: white;
+	font-family: 'Open Sans Light';
+	font-size: 10pt;
+	color: #4a4a4a;
+	border: 1pt solid #4a4a4a;
+	flex: 1;
+	height: 35pt;
+	margin-right: 8pt;
+	width: 100%;
+	padding-left: 20px;
+}
+
+form {
+	width: 230pt;
+	background: #fff;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 40pt;
+}
+
+.account {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 8pt;
+	font-weight: 700;
+	color: #4a4a4a;
+	padding-bottom: 15pt;
+	padding-top: 10pt;
+}
+
+.login {
+	cursor: pointer;
+	background: linear-gradient(to right, #ae23a9, #dc4e1b);
+	font-family: 'Open Sans Semibold';
+	color: #ffffff;
+	font-size: 10pt;
+	border: none;
+	height: 35pt;
+	width: 230pt;
+}
+
+.register {
+	cursor: pointer;
+	background-color: #ffffff;
+	font-family: 'Open Sans Semibold';
+	color: #4a4a4a;
+	font-size: 10pt;
+	border: 1pt solid #9b9b9b;
+	height: 30pt;
+	width: 230pt;
+}
+
+.textLogin {
+	font-family: 'Open Sans Semibold';
+	color: #4a4a4a;
+	font-size: 10pt;
+}
+
+.error {
+	font-size: 10pt;
+	color: #dc4e1b;
+}
+
+.logo {
+	width: 50%;
+	height: 25%;
+}
+
+.bottom pre {
+	font-family: 'Open Sans Light';
+	color: #4a4a4a;
+	font-size: 10pt;
+}
+
+.separator {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: #9b9b9b;
+	margin: 8pt 0pt;
+}
+.separator::before,
+.separator::after {
+	content: "";
+	flex-grow: 1;
+	background: #9b9b9b;
+	height: 1px;
+	font-size: 0pt;
+	line-height: 0pt;
+	margin: 0pt 8pt;
+}
+
+.control {
+	font-family: "Open Sans Light";
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	padding-top: 8px;
+	color: #4a4a4a;
+	cursor: pointer;
+	font-size: 13px;
+}
+	.control input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+.control_indicator {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	height: 12px;
+	width: 12px;
+	background: #ffffff;
+	border: 1px solid #4a4a4a;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+	background: #ffffff;
+}
+
+.control input:checked ~ .control_indicator {
+	background: #ffffff;
+}
+
+.control_indicator:after {
+	box-sizing: unset;
+	content: '';
+	position: absolute;
+	display: none;
+}
+.control input:checked ~ .control_indicator:after {
+	display: block;
+}
+.control-checkbox .control_indicator:after {
+	left: 4px;
+	top: 1px;
+	width: 3px;
+	height: 8px;
+	border: solid #4a4a4a;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.separator p {
+	font-size: 11pt;
+}
+
+hr {
+	margin: 20pt 0;
+	border: none;
+	border-bottom: 1pt solid #9b9b9b;
+	width: 100%;
+}

@@ -7,8 +7,7 @@ export default class People extends Component {
 	render() {
 		return (
 			<>
-				<NavBar />
-				<h1>People</h1>
+				<NavBar from="people"/>
 				<ImageGrid from="Person"/>
 			</>
 		);

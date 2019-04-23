@@ -5,18 +5,34 @@
 	font-family: 'Open Sans Light';
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
+	height: 85px;
 }
 
-a {
+.unselected a {
+	color: #9B9B9B;
+	font-family: "Open sans Light";
 	float: right;
+	padding: 10pt;
   display: block;
   text-align: center;
 	padding: 14px;
 	text-decoration: none;
 }
 
-img {
+.selected a {
+	font-family: "Open sans Semibold";
+	color: #4A4A4A;
+	float: right;
+	padding: 10pt;
+  display: block;
+  text-align: center;
+	padding: 14px;
+	text-decoration: none;
+
+}
+
+.logo {
   float: left;
   width: 138pt;
   height: 18pt;

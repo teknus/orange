@@ -1,32 +1,29 @@
 import {Url,ApplicationKey} from "../configs/configs"
-
+import {login} from "./auth";
 var header = {
     'X-Parse-Application-Id': ApplicationKey,
     'X-Parse-Rest-Api-Key': 'undefined'
 };
 
-// function login(username, password) {
-//     const requestOptions = {
-//         method: 'POST',
-//         headers: header,
-//         body: JSON.stringify({ username, password })
-//     };
+export function loginPost(email, password) {
+    const requestOptions = {
+        method: 'POST',
+        headers: header,
+        body: JSON.stringify({ email, password })
+    };
 
-//     return fetch(`${Url}/users/login`, requestOptions)
-//         .then(handleResponse)
-//         .then(user => {
-//             if (user) {
-//                 user.authdata = window.btoa(username + ':' + password);
-//                 localStorage.setItem('user', JSON.stringify(user));
-//             }
+    return fetch(`${Url}login`, requestOptions)
+        .then(response => response)
+        .then(handleLogin);
+}
 
-//             return user;
-//         });
-// }
-
-// function logout() {
-//     localStorage.removeItem('user');
-// }
+function handleLogin(response){
+    if (response.status === 200){
+        login(response.json().objectId)
+        return true
+    } 
+    return false
+}
 
 export function getAllImages(repository) {
     const requestOptions = {
@@ -34,5 +31,5 @@ export function getAllImages(repository) {
         headers: header
     };
 
-    return fetch(`${Url}classes/${repository}`, requestOptions);
+    return fetch(`${Url}classes/${repository}`, requestOptions).then(response => response.json());
 }
