@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './styles.css';
 import Logo from '../../assets/logo.png';
 import background from '../../assets/bg.jpg';
-import mailIcon from '../../assets/mail.png';
-import lockIcon from '../../assets/lock.png';
 import { loginPost } from '../../services/api';
 
 class SignIn extends Component {
@@ -50,6 +48,7 @@ class SignIn extends Component {
 					<div>
 						<p className="textLogin"> Email </p>
 						<input
+							className="mail"
 							type="email"
 							placeholder="seunome@email.com"
 							onChange={(e) => this.setState({ email: e.target.value })}
@@ -58,6 +57,7 @@ class SignIn extends Component {
 					<div>
 						<p className="textLogin">Password</p>
 						<input
+							className="lock"
 							type={this.state.visibilityPassword}
 							placeholder="Password"
 							onChange={(e) => this.setState({ password: e.target.value })}

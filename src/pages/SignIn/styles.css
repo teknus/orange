@@ -6,11 +6,25 @@ input {
 	color: #4a4a4a;
 	border: 1pt solid #4a4a4a;
 	flex: 1;
-	height: 35pt;
+	height: 30pt;
 	margin-right: 20pt;
 	padding-left: 20pt;
-	width: 90%;
+	width: 210pt;
 	margin-bottom: 15px;
+}
+
+.mail {
+    background-image: url(../../assets/mail.png);
+	background-position: 270px;
+	background-size: 15px; 
+    background-repeat: no-repeat;
+}
+
+.lock {
+    background-image: url(../../assets/lock.png);
+	background-position: 270px;
+	background-size: 15px; 
+    background-repeat: no-repeat;
 }
 
 .account {
