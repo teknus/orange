@@ -1,4 +1,5 @@
 input {
+	flex: 1;
 	background-color: white;
 	font-family: 'Open Sans Light';
 	font-size: 10pt;
@@ -6,24 +7,15 @@ input {
 	border: 1pt solid #4a4a4a;
 	flex: 1;
 	height: 35pt;
-	margin-right: 8pt;
-	width: 100%;
-	padding-left: 20px;
-}
-
-form {
-	width: 230pt;
-	background: #fff;
+	margin-right: 20pt;
 	padding-left: 20pt;
-	padding-right: 20pt;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 40pt;
+	width: 90%;
+	margin-bottom: 15px;
 }
 
 .account {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 8pt;
+	font-family: 'Open Sans Semibold';
+	font-size: 10pt;
 	font-weight: 700;
 	color: #4a4a4a;
 	padding-bottom: 15pt;
@@ -61,11 +53,6 @@ form {
 .error {
 	font-size: 10pt;
 	color: #dc4e1b;
-}
-
-.logo {
-	width: 50%;
-	height: 25%;
 }
 
 .bottom pre {
@@ -157,24 +144,46 @@ hr {
 }
 
 .LoginPage {
+	height: 700pt;
 	display: grid;
-	width: 100%;
-	height: 100vh;
-	grid-template-columns: repeat(16, 1fr);
-	grid-template-rows: repeat(8, 1fr);
+	grid-template-rows: repeat(20, minmax(25pt, 1fr));
+	grid-template-columns: repeat(80, minmax(10pt, 1fr));
+	grid-gap: 5px;
+}
+
+.logo {
+	grid-column: 1/80;
+	grid-row: 2/20;
+	z-index: 100;
+}
+
+.logo img {
+	width: 180px;
+	height: 22px;
+	margin: -1px -30px ;
+	margin-top: 10px;
 }
 
 .backgroundimg {
 	width: 100%;
 	height: 100%;
-	padding-left: 200pt;
-	object-fit: fill;
-	grid-column: 2 / 16;
-	grid-row: 2 / 8;
+	object-fit: scale-down;
+	top: 0;
+	padding-left: 328pt;
+	grid-row: 4/14;
+	grid-column: 4/44;
 }
 
-.container {
-	box-shadow: 3px 2px 12px #4a4a4a;
-	grid-column: 1 / 2;
-	grid-row: 1 / 4;
+form {
+	background: #ffffff;
+	box-shadow: 1px 1px 5px 1px #9b9b9b;
+	z-index: 90;
+	height: 380pt;
+	width: 240pt;
+	padding: 25px;
+	flex-direction: column;
+	align-items: center;
+	grid-row: 2/-1;
+	grid-column: 9 /80;
+	padding-top: 80pt;
 }

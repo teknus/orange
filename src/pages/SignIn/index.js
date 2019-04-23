@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './styles.css';
 import Logo from '../../assets/logo.png';
 import background from '../../assets/bg.jpg';
+import mailIcon from '../../assets/mail.png';
+import lockIcon from '../../assets/lock.png';
 import { loginPost } from '../../services/api';
 
 class SignIn extends Component {
@@ -37,44 +39,43 @@ class SignIn extends Component {
 	render() {
 		return (
 			<div className="LoginPage">
-				<div className="conatiner">
-					<img className="logo" src={Logo} alt="orange logo" />
-					<form>
-						{this.state.error && <p className="error">{this.state.error}</p>}
-						<p className="textLogin"> Email </p>
-						<input
-							type="email"
-							placeholder="seunome@email.com"
-							onChange={(e) => this.setState({ email: e.target.value })}
-						/>
-						<div>
-							<p className="textLogin">Password</p>
-							<input
-								type={this.state.visibilityPassword}
-								placeholder="Password"
-								onChange={(e) => this.setState({ password: e.target.value })}
-							/>
-						</div>
-						<label className="control control-checkbox">
-							Mostrar senha.
-							<input type="checkbox" onClick={this.handlePasswordVisibility} />
-							<div className="control_indicator" />
-						</label>
-
-						<p className="account">Problemas com sua conta?</p>
-						<button className="login" type="submit" onClick={this.handleSignIn}>
-							Acessar
-						</button>
-						<div className="separator">
-							<p> ou </p>
-						</div>
-						<button className="register">Cadastrar</button>
-						<div className="bottom">
-							<pre className="bottom">Termos de uso - Política de privacidade </pre>
-							<span>.</span>
-						</div>
-					</form>
+				<div className="logo">
+					<img src={Logo} alt="orange logo" />
 				</div>
+				<form>
+					{this.state.error && <p className="error">{this.state.error}</p>}
+					<p className="textLogin"> Email </p>
+					<input
+						type="email"
+						placeholder="seunome@email.com"
+						onChange={(e) => this.setState({ email: e.target.value })}
+					/>
+					<div>
+						<p className="textLogin">Password</p>
+						<input
+							type={this.state.visibilityPassword}
+							placeholder="Password"
+							onChange={(e) => this.setState({ password: e.target.value })}
+						/>
+					</div>
+					<label className="control control-checkbox">
+						Mostrar senha.
+						<input type="checkbox" onClick={this.handlePasswordVisibility} />
+						<div className="control_indicator" />
+					</label>
+
+					<p className="account">Problemas para acessar sua conta?</p>
+					<button className="login" type="submit" onClick={this.handleSignIn}>
+						Acessar
+					</button>
+					<div className="separator">
+						<p> ou </p>
+					</div>
+					<button className="register">Cadastrar</button>
+					<div className="bottom">
+						<pre className="bottom">Termos de uso - Política de privacidade </pre>
+					</div>
+				</form>
 				<img className="backgroundimg" src={background} />
 			</div>
 		);

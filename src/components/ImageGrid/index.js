@@ -9,13 +9,13 @@ export default class ImageGrid extends Component {
 		this.state = { list: [] };
 	}
 
-
-	loadImages(from) {
-		getAllImages(from).then((data) => this.setState({ list: data.results, loaded: true }));
+	componentWillMount(){
+		getAllImages(this.props.from).then((data) => this.setState({ list: data.results.sort(function() {
+			return .5 - Math.random();
+		  }), loaded: true }));
 	}
 
 	render() {
-		this.loadImages(this.props.from);
 		return (
 			<div className="page">
 				<p className="description">{this.props.text}</p>
