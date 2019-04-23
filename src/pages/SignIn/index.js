@@ -19,12 +19,15 @@ class SignIn extends Component {
 		const { history } = this.props;
 		const { email, password } = this.state;
 		if (!email || !password) {
-			this.setState({ error: 'Preencha todos os dados para se logar' });
+			this.setState({ error: 'Preencha todos os dados para se logar.' });
 		} else {
-			if (loginPost(email, password)) {
-				history.push('/Food');
-				console.log('push');
-			}
+			loginPost(email, password).then((value) => {
+				if (value) {
+					history.push('/Food');
+				} else {
+					this.setState({error:"Erro de autenticação."})
+				}
+			});
 		}
 	};
 
@@ -44,12 +47,14 @@ class SignIn extends Component {
 				</div>
 				<form>
 					{this.state.error && <p className="error">{this.state.error}</p>}
-					<p className="textLogin"> Email </p>
-					<input
-						type="email"
-						placeholder="seunome@email.com"
-						onChange={(e) => this.setState({ email: e.target.value })}
-					/>
+					<div>
+						<p className="textLogin"> Email </p>
+						<input
+							type="email"
+							placeholder="seunome@email.com"
+							onChange={(e) => this.setState({ email: e.target.value })}
+						/>
+					</div>
 					<div>
 						<p className="textLogin">Password</p>
 						<input
