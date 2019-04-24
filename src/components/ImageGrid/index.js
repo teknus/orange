@@ -15,7 +15,7 @@ export default class ImageGrid extends Component {
 
 	componentWillMount() {
 		//catch errors not implemented
-		var response = Parse.Cloud.run(`getAll${this.props.from}`).then((response) => {
+		Parse.Cloud.run(`getAll${this.props.from}`).then((response) => {
 			var resp = response.map((item, i) => {
 				return item.attributes;
 			});
