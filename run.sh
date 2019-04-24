@@ -1,2 +1,2 @@
-yarn add .
+yarn add package.json
 yarn start
