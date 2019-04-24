@@ -6,8 +6,9 @@
 }
 
 .page hr {
-	height: 4px;
+	height: 6px;
 	display: block;
+	border: None;
 	background: linear-gradient(to right, #ae23a9, #dc4e1b);
 }
 
@@ -15,7 +16,7 @@
 	font-family: "Open sans Semibold";
     color: #4a4a4a;
     font-size: 12pt;
-	margin-bottom: -10pt;
+	margin-bottom: -15pt;
 }
 
 .gallery {

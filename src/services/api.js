@@ -5,11 +5,11 @@ var header = {
     'X-Parse-Rest-Api-Key': 'undefined'
 };
 
-export function loginPost(email, password) {
+export function loginPost(username, password) {
     const requestOptions = {
         method: 'POST',
         headers: header,
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ username, password })
     };
 
     return fetch(`${Url}login`, requestOptions)
