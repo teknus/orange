@@ -23,7 +23,7 @@ class SignIn extends Component {
 				if (value) {
 					history.push('/Food');
 				} else {
-					this.setState({error:"Erro de autenticação."})
+					this.setState({ error: 'Erro de autenticação.' });
 				}
 			});
 		}
@@ -38,6 +38,7 @@ class SignIn extends Component {
 	};
 
 	render() {
+		//{"email":"jhon@testedex.com","password":"1234"}
 		return (
 			<div className="LoginPage">
 				<div className="logo">
@@ -81,7 +82,7 @@ class SignIn extends Component {
 						<pre className="bottom">Termos de uso - Política de privacidade </pre>
 					</div>
 				</form>
-				<img className="backgroundimg" src={background} alt="BackGround Image"/>
+				<img className="backgroundimg" src={background} alt="BackGround Image" />
 			</div>
 		);
 	}

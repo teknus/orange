@@ -8,7 +8,7 @@ export default class Food extends Component {
 		return (
 			<>
 				<NavBar from="food" />
-				<ImageGrid from="Food" text="LIST OF FOODS"/>
+				<ImageGrid from="Foods" text="LIST OF FOODS"/>
 			</>
 		);
 	}

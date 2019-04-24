@@ -8,7 +8,7 @@ export default class People extends Component {
 		return (
 			<>
 				<NavBar from="people"/>
-				<ImageGrid from="Person" text="LIST OF PEOPLE"/>
+				<ImageGrid from="People" text="LIST OF PEOPLE"/>
 			</>
 		);
 	}

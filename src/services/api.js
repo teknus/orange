@@ -1,7 +1,7 @@
-import {Url,ApplicationKey} from "../configs/configs"
+import {Url,ApplicationId} from "../configs/configs"
 import {login} from "./auth";
 var header = {
-    'X-Parse-Application-Id': ApplicationKey,
+    'X-Parse-Application-Id': ApplicationId,
     'X-Parse-Rest-Api-Key': 'undefined'
 };
 
@@ -23,13 +23,4 @@ function handleLogin(response){
         return true
     } 
     return false
-}
-
-export function getAllImages(repository) {
-    const requestOptions = {
-        method: 'GET',
-        headers: header
-    };
-
-    return fetch(`${Url}classes/${repository}`, requestOptions).then(response => response.json());
 }

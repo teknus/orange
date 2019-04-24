@@ -14,17 +14,17 @@ input {
 }
 
 .mail {
-    background-image: url(../../assets/mail.png);
+	background-image: url(../../assets/mail.png);
 	background-position: 270px;
-	background-size: 15px; 
-    background-repeat: no-repeat;
+	background-size: 15px;
+	background-repeat: no-repeat;
 }
 
 .lock {
-    background-image: url(../../assets/lock.png);
+	background-image: url(../../assets/lock.png);
 	background-position: 270px;
-	background-size: 15px; 
-    background-repeat: no-repeat;
+	background-size: 15px;
+	background-repeat: no-repeat;
 }
 
 .account {
@@ -174,7 +174,7 @@ hr {
 .logo img {
 	width: 180px;
 	height: 23px;
-	margin: -1px -30px ;
+	margin: -1px -30px;
 	margin-top: 10px;
 }
 
